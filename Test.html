@@ -8,6 +8,7 @@
 
 <body>
 <h1>SENG Nicolas</h1>
+
 <h2>Contact</h2>
 <p class="copy-box" onclick="copierTexte(this)" data-copie="05 72 06 10 95">05 72 06 10 95 <span class="copier-hint">(Cliquez pour copier)</span></p>
 <p class="copy-box" onclick="copierTexte(this)" data-copie="bryantheam12@gmail.com">bryantheam12@gmail.com <span class="copier-hint">(Cliquez pour copier)</span></p>
@@ -16,14 +17,12 @@
 <p>Connaissance Outil Bureautique/Informatique Basique</p>
 <p>ASSR 2</p>
 <p>Permis de conduire B Obtenu</p>
-
-<h2>Qualités</h2>
-<p>Perséverant</p>
-<p>Régularité</p>
-
-<h2>Langues</h2>
 <p>Français (Langue Maternelle)</p>
 <p>Anglais Américain (Niveau B2)</p>
+
+<h2>Qualités</h2>
+<p>Persévérant</p>
+<p>Régularité</p>
 
 <h2>Parcours effectué</h2>
 <h3>Lycée des Potiers - Bac Pro CIEL 2024 - 2027</h3>
@@ -31,18 +30,71 @@
 <h4>Brevet Obtenu</h4>
 <p>CAP Equipier Polyvalent Commerce | 2024</p>
 <h3>Collège Jean Moulin 2018 - 2022</h3>
-<h4>Brevet Obtenue</h4>
-<p>Certificat Formation Général | 2022 </p>
+<h4>Brevet Obtenu</h4>
+<p>Certificat Formation Général | 2022</p>
 
-<h3>Stages effectué</h3>
-<p>HENSOLDT NEXEYA France | 2026 - 4 Semaines</p>
-<p>ORDIPAUSE - Muret | 2025 - 4 Semaines</p>
-<p>Carrefour Market - Tournefeuille | 2024 - 3 Semaines</p>
-<p>B&M - Roques | 2023 - 3 Semaines</p>
+<h2>Expériences</h2>
 
-    <a href="https://canva.link/5i1clasu5djs38j">Cliquer ici pour voir le Curriculum Vitae</a>
+<div class="experience-item">
+    <p class="exp-header" onclick="toggleExperience(this)">
+        <span>HENSOLDT NEXEYA France | 2026 - 4 Semaines</span>
+        <span class="toggle-hint">(Cliquez pour afficher les tâches effectués)</span>
+    </p>
+    <ul class="exp-details">
+        <li>Création compte utilisateur via Active Directory</li>
+        <li>Attribution permissions d’accès</li>
+        <li>Masterisation d’un poste informatique avec un MECM</li>
+        <li>Déploiement appareil mobile avec un MDM</li>
+        <li>Mise à jour logistique du matériel dans le parc informatique</li>
+        <li>Création compte & adresse mails professionnel</li>
+    </ul>
+</div>
 
-<!-- Script JavaScript pour la copie -->
+<div class="experience-item">
+    <p class="exp-header" onclick="toggleExperience(this)">
+        <span>ORDIPAUSE - Muret | 2025 - 4 Semaines</span>
+        <span class="toggle-hint">(Cliquez pour afficher les tâches effectués)</span>
+    </p>
+    <ul class="exp-details">
+        <li>Montage/démontage ordinateurs</li>
+        <li>Mise à jour logiciel + système d’exploitation</li>
+        <li>Nettoyage des données</li>
+        <li>Nettoyage dossiers malintentionnées</li>
+    </ul>
+</div>
+
+<div class="experience-item">
+    <p class="exp-header" onclick="toggleExperience(this)">
+        <span>Carrefour Market - Tournefeuille | 2024 - 3 Semaines</span>
+        <span class="toggle-hint">(Cliquez pour afficher les tâches effectués)</span>
+    </p>
+    <ul class="exp-details">
+        <li>Réassort</li>
+        <li>Assistance des clients</li>
+        <li>Facing</li>
+        <li>Mise en rayon</li>
+        <li>L'éditage</li>
+    </ul>
+</div>
+
+<div class="experience-item">
+    <p class="exp-header" onclick="toggleExperience(this)">
+        <span>B&M - Roques | 2023 - 3 Semaines</span>
+        <span class="toggle-hint">(Cliquez pour afficher le tâches effectués)</span>
+    </p>
+    <ul class="exp-details">
+        <li>Facing</li>
+        <li>Étiquetage</li>
+        <li>Mise en rayon</li>
+        <li>Réassort</li>
+        <li>Rangement de la réserve</li>
+        <li>Assemblage des meubles pour le display</li>
+        <li>Informer les clients</li>
+    </ul>
+</div>
+
+<a href="https://canva.link/5i1clasu5djs38j">Cliquer ici pour voir le Curriculum Vitae</a>
+
 <script>
 function copierTexte(element) {
     const texteACopier = element.getAttribute('data-copie');
@@ -50,7 +102,7 @@ function copierTexte(element) {
     const hintOriginal = hint.innerText;
 
     navigator.clipboard.writeText(texteACopier).then(() => {
-        hint.innerText = " (✅ Copié !)";
+        hint.innerText = " (Copié !)";
         element.style.borderColor = "#3182ce";
         element.style.backgroundColor = "#f0fff4";
 
@@ -62,6 +114,19 @@ function copierTexte(element) {
     }).catch(err => {
         console.error('Erreur lors de la copie : ', err);
     });
+}
+
+function toggleExperience(headerElement) {
+    const item = headerElement.closest('.experience-item');
+    const hint = headerElement.querySelector('.toggle-hint');
+    
+    item.classList.toggle('active');
+
+    if (item.classList.contains('active')) {
+        hint.innerText = "(Cliquez pour masquer les tâches effectués)";
+    } else {
+        hint.innerText = "(Cliquez pour afficher les tâches effectués)";
+    }
 }
 </script>
 </body>
