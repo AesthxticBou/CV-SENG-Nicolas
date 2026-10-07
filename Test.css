@@ -1,82 +1,82 @@
 /* Style général et typographie moderne */
 body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-line-height: 1.6;
-color: #333333;
-background-color: #f4f7f6;
-margin: 0;
-padding: 20px;
-max-width: 800px;
-margin-left: auto;
-margin-right: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* En-tête principal */
 h1 {
-color: #1a365d;
-text-align: center;
-border-bottom: 3px solid #3182ce;
-padding-bottom: 10px;
-margin-bottom: 30px;
+    color: #1a365d;
+    text-align: center;
+    border-bottom: 3px solid #3182ce;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 /* Titres de sections */
 h2 {
-color: #2b6cb0;
-border-bottom: 2px solid #e2e8f0;
-padding-bottom: 5px;
-margin-top: 30px;
+    color: #2b6cb0;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 5px;
+    margin-top: 30px;
 }
 
 /* Établissements / Diplômes */
 h3 {
-color: #2d3748;
-margin-top: 20px;
-margin-bottom: 5px;
+    color: #2d3748;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
-/* Sous-titres (Stages) */
+/* Sous-titres */
 h4 {
-color: #4a5568;
-font-style: italic;
-margin-top: 10px;
-margin-bottom: 5px;
+    color: #4a5568;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 /* Paragraphes de contenu */
 p {
-background-color: #ffffff;
-padding: 10px 15px;
-margin: 8px 0;
-border-radius: 6px;
-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-border-left: 4px solid #3182ce;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #3182ce;
 }
 
 /* Style spécifique pour les contacts */
 body > p:nth-of-type(1),
 body > p:nth-of-type(2) {
-border-left-color: #3182ce;
+    border-left-color: #3182ce;
 }
 
 /* Lien vers le CV Canva */
 a {
-display: inline-block;  
-margin-top: 30px;
-background-color: #3182ce;
-color: white;
-padding: 12px 20px;
-text-decoration: none;
-border-radius: 6px;
-font-weight: bold;
-transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #3182ce;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 a:hover {
-background-color: #2b6cb0;
+    background-color: #2b6cb0;
 }
 
-/* --- AJOUT POUR LA FONCTION COPIER AU CLIC --- */
+/* --- FONCTION COPIER AU CLIC --- */
 .copy-box {
     cursor: pointer;
     transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -90,4 +90,187 @@ background-color: #2b6cb0;
     font-size: 0.85em;
     color: #718096;
     font-style: italic;
+}
+
+/* --- ACCORDÉON / EXPÉRIENCES DÉPLIANTES --- */
+.exp-header {
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exp-header:hover {
+    background-color: #edf2f7;
+}
+
+.toggle-hint {
+    font-size: 0.85em;
+    color: #718096;
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* Cache la liste de détails par défaut */
+.exp-details {
+    display: none;
+    background-color: #ffffff;
+    margin: 0 0 12px 0;
+    padding: 15px 20px 15px 35px;
+    border-radius: 0 0 6px 6px;
+    border-left: 4px solid #3182ce;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Style de la liste une fois ouverte */
+.experience-item.active .exp-details {
+    display: block;
+}
+
+.experience-item.active .exp-header {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+}/* Style général et typographie moderne */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* En-tête principal */
+h1 {
+    color: #1a365d;
+    text-align: center;
+    border-bottom: 3px solid #3182ce;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Titres de sections */
+h2 {
+    color: #2b6cb0;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* Établissements / Diplômes */
+h3 {
+    color: #2d3748;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+/* Sous-titres */
+h4 {
+    color: #4a5568;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Paragraphes de contenu */
+p {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #3182ce;
+}
+
+/* Style spécifique pour les contacts */
+body > p:nth-of-type(1),
+body > p:nth-of-type(2) {
+    border-left-color: #3182ce;
+}
+
+/* Lien vers le CV Canva */
+a {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #3182ce;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #2b6cb0;
+}
+
+/* --- FONCTION COPIER AU CLIC --- */
+.copy-box {
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.copy-box:hover {
+    background-color: #edf2f7;
+}
+
+.copier-hint {
+    font-size: 0.85em;
+    color: #718096;
+    font-style: italic;
+}
+
+/* --- ACCORDÉON EXPÉRIENCES --- */
+.experience-item {
+    margin-bottom: 10px;
+}
+
+.exp-header {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 !important;
+}
+
+.exp-header:hover {
+    background-color: #edf2f7;
+}
+
+.toggle-hint {
+    font-size: 0.85em;
+    color: #718096;
+    font-style: italic;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+/* Caché par défaut */
+.exp-details {
+    display: none !important;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 15px 20px 15px 35px;
+    border-radius: 0 0 6px 6px;
+    border-left: 4px solid #3182ce;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Visible au clic */
+.experience-item.active .exp-details {
+    display: block !important;
+}
+
+.experience-item.active .exp-header {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
