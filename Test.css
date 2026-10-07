@@ -1,0 +1,93 @@
+/* Style général et typographie moderne */
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: #333333;
+background-color: #f4f7f6;
+margin: 0;
+padding: 20px;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* En-tête principal */
+h1 {
+color: #1a365d;
+text-align: center;
+border-bottom: 3px solid #3182ce;
+padding-bottom: 10px;
+margin-bottom: 30px;
+}
+
+/* Titres de sections */
+h2 {
+color: #2b6cb0;
+border-bottom: 2px solid #e2e8f0;
+padding-bottom: 5px;
+margin-top: 30px;
+}
+
+/* Établissements / Diplômes */
+h3 {
+color: #2d3748;
+margin-top: 20px;
+margin-bottom: 5px;
+}
+
+/* Sous-titres (Stages) */
+h4 {
+color: #4a5568;
+font-style: italic;
+margin-top: 10px;
+margin-bottom: 5px;
+}
+
+/* Paragraphes de contenu */
+p {
+background-color: #ffffff;
+padding: 10px 15px;
+margin: 8px 0;
+border-radius: 6px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+border-left: 4px solid #3182ce;
+}
+
+/* Style spécifique pour les contacts */
+body > p:nth-of-type(1),
+body > p:nth-of-type(2) {
+border-left-color: #3182ce;
+}
+
+/* Lien vers le CV Canva */
+a {
+display: inline-block;  
+margin-top: 30px;
+background-color: #3182ce;
+color: white;
+padding: 12px 20px;
+text-decoration: none;
+border-radius: 6px;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+
+a:hover {
+background-color: #2b6cb0;
+}
+
+/* --- AJOUT POUR LA FONCTION COPIER AU CLIC --- */
+.copy-box {
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.copy-box:hover {
+    background-color: #edf2f7;
+}
+
+.copier-hint {
+    font-size: 0.85em;
+    color: #718096;
+    font-style: italic;
+}

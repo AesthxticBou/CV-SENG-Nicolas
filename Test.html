@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="Test.css">
+    <title>Portfolio de Nicolas SENG</title>
+</head>
+
+<body>
+<h1>SENG Nicolas</h1>
+<h2>Contact</h2>
+<p class="copy-box" onclick="copierTexte(this)" data-copie="05 72 06 10 95">05 72 06 10 95 <span class="copier-hint">(Cliquez pour copier)</span></p>
+<p class="copy-box" onclick="copierTexte(this)" data-copie="bryantheam12@gmail.com">bryantheam12@gmail.com <span class="copier-hint">(Cliquez pour copier)</span></p>
+
+<h2>Compétences</h2>
+<p>Connaissance Outil Bureautique/Informatique Basique</p>
+<p>ASSR 2</p>
+<p>Permis de conduire B Obtenu</p>
+
+<h2>Qualités</h2>
+<p>Perséverant</p>
+<p>Régularité</p>
+
+<h2>Langues</h2>
+<p>Français (Langue Maternelle)</p>
+<p>Anglais Américain (Niveau B2)</p>
+
+<h2>Parcours effectué</h2>
+<h3>Lycée des Potiers - Bac Pro CIEL 2024 - 2027</h3>
+<h3>Lycée Sainte Marie Saint Sernin 2022 - 2024</h3>
+<h4>Brevet Obtenu</h4>
+<p>CAP Equipier Polyvalent Commerce | 2024</p>
+<h3>Collège Jean Moulin 2018 - 2022</h3>
+<h4>Brevet Obtenue</h4>
+<p>Certificat Formation Général | 2022 </p>
+
+<h3>Stages effectué</h3>
+<p>HENSOLDT NEXEYA France | 2026 - 4 Semaines</p>
+<p>ORDIPAUSE - Muret | 2025 - 4 Semaines</p>
+<p>Carrefour Market - Tournefeuille | 2024 - 3 Semaines</p>
+<p>B&M - Roques | 2023 - 3 Semaines</p>
+
+    <a href="https://canva.link/5i1clasu5djs38j">Cliquer ici pour voir le Curriculum Vitae</a>
+
+<!-- Script JavaScript pour la copie -->
+<script>
+function copierTexte(element) {
+    const texteACopier = element.getAttribute('data-copie');
+    const hint = element.querySelector('.copier-hint');
+    const hintOriginal = hint.innerText;
+
+    navigator.clipboard.writeText(texteACopier).then(() => {
+        hint.innerText = " (✅ Copié !)";
+        element.style.borderColor = "#3182ce";
+        element.style.backgroundColor = "#f0fff4";
+
+        setTimeout(() => {
+            hint.innerText = hintOriginal;
+            element.style.borderColor = "";
+            element.style.backgroundColor = "";
+        }, 2000);
+    }).catch(err => {
+        console.error('Erreur lors de la copie : ', err);
+    });
+}
+</script>
+</body>
+</html>
